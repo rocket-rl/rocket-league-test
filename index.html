@@ -1,0 +1,322 @@
+﻿<DOCTYPE html>
+<html>
+  <head>
+     <meta charset="utf-8" />
+     <title>Rocket League</title>
+<style>
+     * {
+         box-sizing: border-box;
+     }
+     body {
+         background-color: #101820;
+         color: white;
+         font-family; Arial, sens-serif;
+         font-size: 18px;
+         padding: 20px;
+         text-align: center;
+         margin: 0;
+     }
+     h1 {
+         color: #00bfff;
+         font-size: 55px;
+         text-align: center;
+     }
+     h2 {
+         color: #66d9ff;
+         font-size: 28px;
+     }
+     p{
+         background-color: #1c2a38;
+         padding: 15px;
+         border-radius: 10px;
+     }
+     img {
+         width: 400px;
+         border: 3px solid black;
+         border-radius: 15px;
+         transition: transform 0.3s;
+     }
+     img:hover {
+         transform: scale(1.05);
+     }
+     .gallery {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 60px;
+         margin-top: 40px;
+     }
+     .gallery img {
+         width: 250px;
+     }
+     button {
+         background-color: #007bff;
+         color: white;
+         font-size: 20px;
+         padding: 12px 24px;
+         border: none;
+         border-radius: 8px;
+         cursor: pointer;
+         opacity: 1;
+         transition: 0.3s;
+     }
+     button:hover {
+         background-color: #0056b3;
+         color: white;
+         opacity: 0.9;
+         transform: translateY(-5px)
+         scale(1.1); 
+     }
+   
+     #info {
+         opacity: 0;
+		 transition: opacity 1s linear; 
+     }
+		
+     #info.visible {
+         opacity: 1;
+     }
+     .features {
+	     display: flex;
+	     justify-content: center;
+	     gap: 25px;
+	     morgin: 40px;
+	     padding-top: 60px;
+	 }
+	 .feature {
+	     background-color #1c2b36;
+	     color: white;
+	     padding: 20px;
+	     border: 2px solid transparent;
+	     border-radius: 15px;
+	     width: 250px;
+	     text-align: center;
+	     transition: transform 0.3s ease, 
+	               box-shadow 0.3s ease,
+				   border-color 0.3s ease;
+	 }
+	 .feature:hover {
+	     transform: scale(1.05);
+	     box-shadow: 0 0 30px #00bfff;
+	     border-color: #00bfff;
+	 }
+  @media (max-width: 600px) {
+     .features {
+	     flex-direction: column;
+	     align-items: center;
+	     gap: 30px;
+	     padding-top: 40px;
+	 }
+	 
+	 .feature {
+	     width: 250px;
+	     box-sizing: border-box;
+	 }
+     img {
+	     max-width: flex;
+	     height: auto;
+	  }
+	 .gallery {
+	     display: flex;
+	     margin-bottom: 60px;
+	     flex-direction: column;
+	     align-items: center;
+	     gap: 20px;
+	  }
+	 .navbar {
+	     display: flex;
+		 justify-content: center;
+		 gap: 30px;
+		 background-color: #1c2b36;
+		 padding: 20px;
+		 border-radius: 12px;
+		 margin-bottom: 30px;
+	 }
+	 .navbar a {
+	     color: white;
+		 text-decoration: none;
+		 font-size: 18px;
+         transition: color 0.3s ease;
+     }
+     .navbar a:hover {
+         color: #00bfff;
+     }		 
+     .navbar {
+         flex-direction: colum;
+         align-items: center;
+         gap: 20px;		 
+     }
+	 }
+	 .gallery-item p {
+	     background-color: #1c2b36;
+	     color: #00bfff;
+		 font-size: 18px;
+		 text-align: center;
+		 margin-top: 12px;
+		 transition: color 0.3s ease, transform 0.3s ease;
+	 }
+	 .gallery-item p:hover {
+	     color: white;
+		 transform: scale(1.05);
+     }	 
+
+</style>
+  </head>
+    <body>
+     <nav class="navbar">
+   
+         <a href="#home">Головна</a>
+	     <a href="#about">Про гру</a>
+	     <a href="#cars">Автомобілі</a>
+	     <a href="#competition">Змагання</a>
+     </nav>
+    <h1 id="home">Rocket League</h1>   
+      <p id="about"> Геймплей гри практично такий самий, як і у SARPBC.
+	  Гравці керують машинкою з ракетним двигуном і намагаються забити м'яч, який набагато більше машинок, у ворота, за що отримують бали.
+	  Весь процес нагадує футбольну гру, але з елементами гонок на виживання.</p>
+    <h2> Футбол за допомогою автомобіля, яким керує гравець.</h2>
+      <p> Ти можеш так само стрибати, літати, робити піруети і саме головне - забивати голи у ворота опонента!</p>
+     <img src="rocket.jpg" 
+          alt="Rocket League" />
+		  
+<div class="gallery">
+	     <div class="gallery-item">
+         <img src="rocket1.jpg"
+              alt="Ліва фотографія" />
+	     <p>Rocket League зліва</p>
+	 </div>
+	 
+	 <div class="gallery-item">
+         <img src="rocket.gif"
+              alt="Машинка забиває гол" />
+	     <p>Неймовірний гол! &#9917;</p>
+     </div>
+	 
+	 <div class="gallery-item">
+         <img src="rocket2.jpg" 
+              alt="Права фотографія" />
+		 <p>Rocket League справа</p>
+	 </div>
+</div>
+   
+  <button>Дізнатися більше</button>
+  <p id="info" style="display: none;">
+     Rocket League - це гра, де ти керуєш автомобілем, стрибаєш, літаєш і забиваєш голи!
+  </p>
+<script>
+
+     const info =
+  document.getElementById("info");
+     const button =
+  document.querySelector("button");
+
+   let visible = false;
+   
+   button.onclick = function() {
+      if (visible == false) { 
+	     info.style.display = "block"; 
+		 info.classList.remove("visible");
+		 
+         setTimeout(function() {
+		   info.classList.add("visible");
+		   info.scrollIntoView({
+             behavior: "smooth",
+             block: "center" });
+		 }, 50);
+
+         visible = true;
+         button.textContent = "Приховати";
+    } else {
+	    info.classList.remove("visible");
+		
+	    setTimeout(function() {
+          info.style.display = "none";
+		  }, 1000);
+          visible = false;
+     button.textContent = "Дізнатися більше";
+	 }
+    };
+     document.querySelectorAll('.navbar a').forEach(function(link) {
+         link.onclick = function(event) {
+     
+         const target =
+     document.querySelector(this.getAttribute('href'));
+	     if (target) {
+	// event.preventDefault();
+	 
+	 target.scrollIntoView({
+	         behavior: 'smooth',
+			 block: 'center'});
+		}
+	};
+     });
+	 function openSection(sectionId) {
+	 
+	 document.getElementById("home").style.display = "none";
+	 
+	 document.getElementById("about").style.display = "none";
+	  
+	 document.querySelector(".gallery").style.display = "none";
+	 
+	 document.querySelector(".features").style.display = "none";
+	 
+	 document.querySelector("button").style.display = "none";
+	 
+	 document.getElementById("gameplay").style.display = "none";
+	 
+	 document.getElementById(sectionId).style.display = "block";
+	 }
+	 
+	 function goHome() {
+	 document.getElementById("home").style.display = "block";
+	 	
+	 document.getElementById("about").style.display = "block";
+	 
+	 document.querySelector(".gallery").style.display = "flex";
+	 
+	 document.querySelector(".features").style.display = "flex";
+	 
+	 document.querySelector("button").style.display = "inline-block";
+     
+	 document.getElementById("gameplay").style.display = "none";
+	 }
+
+</script>
+  <div class="features">
+  
+     <div class="feature"
+	 onclick="openSection('gameplay')">
+        <h2>&#9917; Ігровий процес</h2>
+        <p>Керуй автомобілем, літай і забивай голи!</p>
+     </div>
+	
+	 <div class="feature" id="cars"
+	 onclick="openSelection('carsPage')">
+	     <h2>&#127942; Автомобілі</h2>
+		 <p>Обирай машину та створюй власний стиль!</p>
+     </div>
+	
+     <div class="feature" id="competition"
+	  onclick="openSelection('competitionPage')">
+	     <h2>&#128640; Змагання</h2>
+		 <p>Змагайся з іншими гравцями та перемагай!</p>
+	 </div>
+	
+     </div>
+  <div id="gameplay" style="display: none;">
+         <h1>&#9917; Ігровий процес</h1>
+		 
+		 <p>
+		   У Rocket League ти керуєш автомобілем, стрибаєш, літаєш і забиваєш голи!
+		 </p>
+		 
+		 <h2>Поради для гравців</h2>
+		 
+		 <p>1. Навчитися правильно керувати автомобілем.</p>
+		 <p>2.Використовувати прискорення в потрібний момент.</p>
+		 <p>3.Тренуй удари по м'ячу.</p>
+		 <button onclick="goHome()"> ←На головну</button>
+   </div>
+ </body>
+   
+</html>
